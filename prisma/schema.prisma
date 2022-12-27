@@ -64,3 +64,17 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model TimeCard {
+  id           String   @id @default(cuid())
+  firstName    String
+  lastName     String
+  hours        Int
+  comment      String?
+  placements   Int
+  returnVisits Int
+  bibleStudies Int
+  videos       Int
+  month        DateTime
+  createdAt    DateTime @default(now())
+}
