@@ -7,7 +7,9 @@ import { trpc } from "../utils/trpc";
 import BaseLayout from "../layout/base-layout";
 
 const Home: NextPage = () => {
-  const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
+  const { data, isLoading } = trpc.example.hello.useQuery({
+    text: "from tRPC",
+  });
 
   return (
     <>
@@ -27,7 +29,11 @@ const Home: NextPage = () => {
                 <p className="mt-4 text-lg text-gray-600 md:text-xl">
                   Everything in its place. Have peace of mind with your time
                 </p>
-                <CTAButton icon={<ArrowRightIcon width={20} />}>
+                <CTAButton
+                  isLink={true}
+                  to="form"
+                  icon={<ArrowRightIcon width={20} />}
+                >
                   Start
                 </CTAButton>
               </div>
