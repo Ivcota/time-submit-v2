@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { CTAButton } from "../base_components";
+import { Container, CTAButton } from "../base_components";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 import { trpc } from "../utils/trpc";
@@ -20,13 +20,13 @@ const Home: NextPage = () => {
       </Head>
       <BaseLayout>
         <main>
-          <div className="container mx-auto mt-16 px-4 md:mt-44 ">
+          <Container className="mt-16 md:mt-44 ">
             <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
               <div className="pb-16">
                 <h1 className="text-4xl font-semibold sm:leading-none  md:text-6xl md:leading-snug ">
                   Seamless Time Submission
                 </h1>
-                <p className="mt-4 text-lg text-gray-600 md:text-xl">
+                <p className="mt-4 text-lg font-light text-gray-600 md:text-xl">
                   Everything in its place. Have peace of mind with your time
                 </p>
                 <CTAButton
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               </div>
               <div className="min-w-ful h-64 rounded bg-[url('https://images.unsplash.com/photo-1518976024611-28bf4b48222e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80')] bg-cover  shadow-2xl md:h-[640px] md:w-[592]" />
             </div>
-          </div>
+          </Container>
         </main>
       </BaseLayout>
     </>
