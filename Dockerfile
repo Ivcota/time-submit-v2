@@ -6,6 +6,8 @@ WORKDIR /app
 
 EXPOSE 3000
 
+EXPOSE 5555
+
 RUN "yarn"
 
-CMD [ "yarn", "dev" ]
+CMD [ "yarn", "docker_dev"]
