@@ -8,7 +8,7 @@ services:
       - ./src:/app/src
       - ./prisma:/app/prisma
     environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/DATABASE?time-submit
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/DATABASE?time-submit?connect_timeout=300
     depends_on:
       - db
   db:
