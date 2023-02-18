@@ -5,7 +5,8 @@ services:
       - "3000:3000"
       - "5555:5555"
     volumes:
-      - .:/app
+      - ./src:/app/src
+      - ./prisma:/app/prisma
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/DATABASE?time-submit
     depends_on:
