@@ -1,6 +1,9 @@
 import { Container, Input, Navbar } from "../base_components";
 
 const FormPage = () => {
+  const utils = trpc.useContext();
+  const { data } = trpc.timeCard.listAllCards.useQuery();
+
   return (
     <div>
       <Navbar />
