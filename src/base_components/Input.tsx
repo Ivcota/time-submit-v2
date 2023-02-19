@@ -16,12 +16,14 @@ const Input = ({
   helperText,
   className,
   placeholder,
+  type,
   ...props
 }: IInputProps) => {
   return (
     <div className={`flex flex-col items-start ${className}`} {...props}>
       {!!label && <label className="text-sm text-gray-700">{label}</label>}
       <input
+        type={type}
         placeholder={placeholder}
         className={`mt-2 rounded-lg border border-gray-300 py-2 px-3 outline-none  transition-all duration-100 placeholder:text-gray-500 focus-within:ring ${
           isError ? "ring ring-red-400" : "ring-sky-300"
